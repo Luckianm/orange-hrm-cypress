@@ -3,7 +3,7 @@ import selectorsList from "../fixtures/selectorsList.json"
 
 describe('Orange HRM Tests user', () => {
 
-  it('Login - Success', () => {
+  it('My info page - success', () => {
     cy.visit('/auth/login')
     cy.get(selectorsList.usernameField).type(userData.userSuccess.username)
     cy.get(selectorsList.passwordField).type(userData.userSuccess.password)
