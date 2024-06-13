@@ -15,11 +15,11 @@ class MyInfoPage {
         return selectors
     }
 
-    myInfoFillAndSave() {
-        cy.get(this.selectorsList().firstNameField).clear().type("firstName")
-        cy.get(this.selectorsList().middleNameField).clear().type("middleName")
-        cy.get(this.selectorsList().lastNameField).clear().type("lastName")
-        cy.get(this.selectorsList().genericField).eq(3).clear().type("Nickname")
+    myInfoFillAndSave(firstName, middleName, lastName, nickName) {
+        cy.get(this.selectorsList().firstNameField).clear().type(firstName)
+        cy.get(this.selectorsList().middleNameField).clear().type(middleName)
+        cy.get(this.selectorsList().lastNameField).clear().type(lastName)
+        cy.get(this.selectorsList().genericField).eq(3).clear().type(nickName)
         cy.get(this.selectorsList().genericField).eq(4).clear().type("01")
         cy.get(this.selectorsList().genericField).eq(5).clear().type("02")
         cy.get(this.selectorsList().genericField).eq(6).click()
